@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import MovieLine from '../movies/MovieLine'
 import MoviesService from '../../services/movies'
-import { Redirect } from 'react-router-dom'
 
 
 const Movie = (props) => {
@@ -14,7 +12,7 @@ const Movie = (props) => {
             if (id) {
                 let movie = await MoviesService.getMovieInfo(id)
 
-                console.log(movie)
+                
                 sethorrorMovie(movie)
             }
 
